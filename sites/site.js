@@ -2,6 +2,7 @@
     NEEDED GLOBAL VARIABLES
 
     function detail_page() {return document.URL.indexOf("www.famillechretienne.fr/dtails_") != -1}
+    function ad_id(url) {return url}
     container_selector = '.liste_annonce'
     ads_selector = '.annonce'
 */
@@ -18,7 +19,7 @@ function site() {
 
     var length = ads.length
     for (var i = 0; i < length; i++) {
-      container.ads.push(new Ad($(ads[i]).html(), $(ads[i]).find('a').attr('href'), i))
+      container.ads.push(new Ad($(ads[i]).html(), ad_id($(ads[i]).find('a')[0].href), i))
     }
 
     
@@ -73,7 +74,7 @@ function retrieveData() {
 
 function saveDetails() {
   updated_data = []
-  updated_data.push(document.URL)
+  updated_data.push(ad_id(document.URL))
   updated_data.push($('#form_details input')[0].checked)
   updated_data.push($('#form_details input')[2].value)
   updated_data.push($('#form_details input')[3].value)
