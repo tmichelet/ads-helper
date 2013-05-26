@@ -1,7 +1,7 @@
 /*
     NEEDED GLOBAL VARIABLES
 
-    detail_page = "www.famillechretienne.fr/dtails_"
+    function detail_page() {return document.URL.indexOf("www.famillechretienne.fr/dtails_") != -1}
     container_selector = '.liste_annonce'
     ads_selector = '.annonce'
 */
@@ -9,7 +9,7 @@
 function site() {
   console.log()
 
-  if(document.URL.indexOf(detail_page) == -1) {
+  if(!detail_page()) {
     // Search page
     console.log('this is the list page')
     // initialization 
