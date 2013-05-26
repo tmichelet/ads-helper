@@ -26,5 +26,7 @@ console.log('module loaded')
 
 
 function get_current_website() {
-	return document.URL.split('www.')[1].split('.')[0];
+	site = document.URL.split('www.')[1].split('.')[0]
+	console.log('considering site ' + site)
+	return site;
 }
