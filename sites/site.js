@@ -19,7 +19,12 @@ function site() {
 
     var length = ads.length
     for (var i = 0; i < length; i++) {
-      container.ads.push(new Ad($(ads[i]).html(), ad_id($(ads[i]).find('a')[0].href), i))
+      link = $(ads[i]).find('a')[0].href
+      if(link == "") {
+        //TODO fix this
+        link = $(ads[i]).find('a')[1].href
+      }
+      container.ads.push(new Ad($(ads[i]).html(), ad_id(link), i))
     }
 
     
@@ -50,7 +55,7 @@ function site() {
 function retrieveData() {
   current_location = ""
   for (var i = 0; i < spreadsheet_content.length; i++) {
-    if(spreadsheet_content[i][0] == document.URL) {
+    if(spreadsheet_content[i][0] == ad_id(document.URL)) {
       current_location = spreadsheet_content[i]
     }
   };
