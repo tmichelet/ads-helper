@@ -20,6 +20,7 @@
       "ads.js",
       "sites/site.js",
       "jquery.min.js",
-      "sites/famillechretienne.js"
+      "sites/famillechretienne.js",
+      "sites/pap.js"
     ]
 }
