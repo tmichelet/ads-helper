@@ -8,7 +8,10 @@
     },
     "content_scripts": [
     {
-      "matches": ["http://www.famillechretienne.fr/*"],
+      "matches": [
+        "http://www.famillechretienne.fr/*",
+        "http://www.pap.fr/*"
+      ],
       "js": ["include.js"]
     }],
     "web_accessible_resources": [
@@ -17,6 +20,7 @@
       "ads.js",
       "sites/site.js",
       "jquery.min.js",
-      "sites/famillechretienne.js"
+      "sites/famillechretienne.js",
+      "sites/pap.js"
     ]
 }
