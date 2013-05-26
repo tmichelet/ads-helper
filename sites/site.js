@@ -47,6 +47,7 @@ function site() {
 
 
 function retrieveData() {
+  current_location = ""
   for (var i = 0; i < spreadsheet_content.length; i++) {
     if(spreadsheet_content[i][0] == document.URL) {
       current_location = spreadsheet_content[i]
