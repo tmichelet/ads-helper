@@ -10,7 +10,8 @@
     {
       "matches": [
         "http://www.famillechretienne.fr/*",
-        "http://www.pap.fr/*"
+        "http://www.pap.fr/*",
+        "http://www.seloger.com/*"
       ],
       "js": ["include.js"]
     }],
@@ -22,5 +23,6 @@
       "jquery.min.js",
       "sites/famillechretienne.js",
       "sites/pap.js"
+      "sites/seloger.js"
     ]
 }
