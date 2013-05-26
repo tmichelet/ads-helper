@@ -31,7 +31,7 @@ function site() {
     // remove unwanted ads 
     for (var i = 0; i < length; i++) {
       if(!container.ads[i].shouldBeDisplayed()) {
-        $(ads[i]).hide()
+        $(ads[i]).toggle("slow")
       }
     }  
   }
