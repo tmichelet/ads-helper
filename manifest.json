@@ -1,0 +1,22 @@
+{
+    "name": "Classified ad helper",
+    "version": "1.0",
+    "manifest_version": 3,
+    "description": "Find your way between all classified ad websites",
+    "browser_action": {
+      "default_icon": "icon.png"
+    },
+    "content_scripts": [
+    {
+      "matches": ["http://www.famillechretienne.fr/*"],
+      "js": ["include.js"]
+    }],
+    "web_accessible_resources": [
+      "main.js",
+      "loading.js",
+      "ads.js",
+      "sites/site.js",
+      "jquery.min.js",
+      "sites/famillechretienne.js"
+    ]
+}
