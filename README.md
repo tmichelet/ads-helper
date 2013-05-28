@@ -16,7 +16,7 @@ Epic 1: improve detail information
 
 Epic 2: add websites
 	* job websites
-	* price minister, amazon, ebay, ...
+	* price minister, amazon, ebay, leboncoin ...
 
 Epic 3: list view
 	* label the ad if new
