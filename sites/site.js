@@ -72,6 +72,7 @@ function retrieveData() {
     $('#form_details input')[6].value = current_location[6]
     $('#form_details input')[7].value = current_location[7]
     $('#form_details input')[8].value = current_location[8]
+    $('#form_details input')[9].value = current_location[9]
   }
 }
 
@@ -89,6 +90,7 @@ function saveDetails() {
   updated_data.push($('#form_details input')[6].value)
   updated_data.push($('#form_details input')[7].value)
   updated_data.push($('#form_details input')[8].value)
+  updated_data.push($('#form_details input')[9].value)
   updated_data = updated_data.join('##')
   console.log(updated_data)
 
@@ -137,6 +139,7 @@ function add_panel() {
       Soleil: <input type="text" name="Soleil"><br>\
       Electro menage: <input type="text" name="Electro"><br>\
       Balcon: <input type="text" name="Balcon"><br>\
+      Contacté: <input type="text" name="Contacte"><br>\
       <input type="submit" value="Save">\
     </form>\
     '
