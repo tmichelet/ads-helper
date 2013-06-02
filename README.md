@@ -15,8 +15,8 @@ Epic 1: improve detail information
 	* dynamically add rows depending on the spreadsheet content
 
 Epic 2: add websites
-	* job websites
-	* price minister, amazon, ebay, leboncoin ...
+	* job websites, leboncoin
+	* price minister, amazon, ebay, ...
 
 Epic 3: list view
 	* label the ad if new
