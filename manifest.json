@@ -12,7 +12,9 @@
       "matches": [
         "http://www.famillechretienne.fr/*",
         "http://www.pap.fr/*",
-        "http://www.seloger.com/*"
+        "http://www.seloger.com/*", 
+        "http://www.studentenwerk-muenchen.de/*",
+        "http://www.studenten-wg.de/*"
       ],
       "js": ["include.js"]
     }],
@@ -24,7 +26,9 @@
       "utils/jquery.min.js",
       "sites/famillechretienne.js",
       "sites/pap.js",
-      "sites/seloger.js"
+      "sites/seloger.js",
+      "sites/studentenwerk-muenchen.js",
+      "sites/studenten-wg.js"
     ],
     "permissions": [
         "tabs", "http://*/*", "https://*/*"
