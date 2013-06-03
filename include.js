@@ -1,5 +1,5 @@
 var script = document.createElement('script');
-script.src = chrome.extension.getURL('/jquery.min.js');
+script.src = chrome.extension.getURL('/utils/jquery.min.js');
 document.body.appendChild(script); 
 
 var script = document.createElement('script');
