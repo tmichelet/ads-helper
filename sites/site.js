@@ -33,6 +33,9 @@ function site() {
       if(!container.ads[i].shouldBeDisplayed()) {
         $(ads[i]).toggle("slow")
       }
+      if(container.ads[i].isNew()) {
+        $(ads[i]).prepend('<p style="color:blue">New!</p>');
+      }
     }  
   }
 

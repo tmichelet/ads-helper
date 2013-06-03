@@ -8,6 +8,10 @@ function Ad (html, id, position) {
         position = jQuery.inArray(this.id, read_ads)
         return position == -1 || spreadsheet_content[position+1][1];
     };
+    this.isNew = function() {
+        position = jQuery.inArray(this.id, read_ads)
+        return position == -1;
+    };
 }
 
 function AdsContainer (html) {
