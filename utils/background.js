@@ -4,7 +4,7 @@ chrome.extension.onMessage.addListener(
         case "test-all":
             // execute the content script
             chrome.tabs.executeScript(null, { // defaults to the current tab
-                file: "test/tests.js", // script to inject into page and run in sandbox
+                file: "/popup/contentscript.js", // script to inject into page and run in sandbox
                 allFrames: true // This injects script into iframes in the page and doesn't work before 4.0.266.0.
             });
             sendResponse({}); // sending back empty response to sender
