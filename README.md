@@ -13,7 +13,6 @@ ROADMAP
 Epic 1: improve detail information
 	* make it look good
 	* set it's z*index (cf seloger)
-	* dynamically add rows depending on the spreadsheet content
 
 Epic 2: add websites
 	* job websites, leboncoin
@@ -36,3 +35,12 @@ Epic 5: admin as a plugin
 Epic 6: deploy it
 	* publish on the store
 	* market it
+
+future:
+raccourcis clavier pour sauver, pas intéressant par défault, 
+écraser les raccourcis du site,
+écraser le css
+fermer la page si pas intéressant sauvé
+tuto avec raccourcis clabviers de chrome aussi
+Mail action
+vu par

@@ -57,6 +57,7 @@ function site() {
 
 function retrieveData() {
   current_location = ""
+  spreadsheet_headers = spreadsheet_content[0]
   for (var i = 0; i < spreadsheet_content.length; i++) {
     if(spreadsheet_content[i][0] == ad_id(document.URL)) {
       current_location = spreadsheet_content[i]
@@ -68,13 +69,12 @@ function retrieveData() {
   else {
     $('#form_details input')[0].checked = current_location[1]
     $('#form_details input')[1].checked = !current_location[1]
-    $('#form_details input')[2].value = current_location[2]
-    $('#form_details input')[3].value = current_location[3]
-    $('#form_details input')[4].value = current_location[4]
-    $('#form_details input')[5].value = current_location[5]
-    $('#form_details input')[6].value = current_location[6]
-    $('#form_details input')[7].value = current_location[7]
-    $('#form_details input')[8].value = current_location[8]
+    
+    for(var i = 2; i < spreadsheet_headers.length; i++) {
+      child = spreadsheet_headers[i] + ': <input type="text" value="'+current_location[i]+'"><br>'
+      $('#form_details').children().last().append(child)
+    }
+    $('#form_details').children().last().append('<input type="submit" value="Save">')
   }
 }
 
@@ -85,13 +85,10 @@ function saveDetails() {
   updated_data = []
   updated_data.push(ad_id(document.URL))
   updated_data.push($('#form_details input')[0].checked)
-  updated_data.push($('#form_details input')[2].value)
-  updated_data.push($('#form_details input')[3].value)
-  updated_data.push($('#form_details input')[4].value)
-  updated_data.push($('#form_details input')[5].value)
-  updated_data.push($('#form_details input')[6].value)
-  updated_data.push($('#form_details input')[7].value)
-  updated_data.push($('#form_details input')[8].value)
+  all_inputs = $('#form_details input')
+  for(var i = 2; i < all_inputs.length - 1; i++) {
+      updated_data.push(all_inputs[i].value)
+  }
   updated_data = updated_data.join('##')
   console.log(updated_data)
 
@@ -130,17 +127,8 @@ function add_panel() {
     form.setAttribute("id", "form_details");
     form.innerHTML = '\
     <form name="input" onSubmit="saveDetails(); return false;">\
-      Interessant:<br>\
       <input type="radio" name="keep" value="true"> oui<br>\
       <input type="radio" name="keep" value="false"> non<br>\
-      Loyer: <input type="text" name="Loyer"><br>\
-      Superficie: <input type="text" name="Superficie"><br>\
-      Meuble: <input type="text" name="Meuble"><br>\
-      Metro: <input type="text" name="Metro"><br>\
-      Soleil: <input type="text" name="Soleil"><br>\
-      Electro menage: <input type="text" name="Electro"><br>\
-      Balcon: <input type="text" name="Balcon"><br>\
-      <input type="submit" value="Save">\
     </form>\
     '
     form.style.color = darkBlueColor;
