@@ -69,13 +69,19 @@ function retrieveData() {
   else {
     $('#form_details input')[0].checked = current_location[1]
     $('#form_details input')[1].checked = !current_location[1]
-    
+  }    
+    console.log(current_location)
     for(var i = 2; i < spreadsheet_headers.length; i++) {
-      child = spreadsheet_headers[i] + ': <input type="text" value="'+current_location[i]+'"><br>'
+      if(current_location == "") {
+        value = ''
+      }
+      else {
+        value = current_location[i]
+      }
+      child = spreadsheet_headers[i] + ': <input type="text" value="'+value+'"><br>'
       $('#form_details').children().last().append(child)
     }
     $('#form_details').children().last().append('<input type="submit" value="Save">')
-  }
 }
 
 
