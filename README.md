@@ -44,3 +44,8 @@ fermer la page si pas intéressant sauvé
 tuto avec raccourcis clabviers de chrome aussi
 Mail action
 vu par
+
+
+
+Corbeille trop cher-> laisser si prix baisse
+Repérer une même offre en plusieurs annonces (se loger)

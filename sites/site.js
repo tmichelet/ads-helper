@@ -19,11 +19,7 @@ function site() {
 
     var length = ads.length
     for (var i = 0; i < length; i++) {
-      link = $(ads[i]).find('a')[0].href
-      if(link == "") {
-        //TODO fix this
-        link = $(ads[i]).find('a')[1].href
-      }
+      link = ads[i].href
       container.ads.push(new Ad($(ads[i]).html(), ad_id(link), i))
     }
 
@@ -31,7 +27,7 @@ function site() {
     // remove unwanted ads 
     for (var i = 0; i < length; i++) {
       if(!container.ads[i].shouldBeDisplayed()) {
-        $(ads[i]).toggle("slow")
+        $(ads[i]).hide()
       }
       if(container.ads[i].isNew()) {
         $(ads[i]).prepend('<p style="color:blue">New!</p>');
