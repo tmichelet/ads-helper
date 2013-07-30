@@ -14,7 +14,8 @@
         "http://www.pap.fr/*",
         "http://www.seloger.com/*", 
         "http://www.studentenwerk-muenchen.de/*",
-        "http://www.studenten-wg.de/*"
+        "http://www.studenten-wg.de/*",
+        "http://www.avendrealouer.fr/annonces-immobilieres/*"
       ],
       "js": ["include.js"]
     }],
@@ -28,7 +29,8 @@
       "sites/pap.js",
       "sites/seloger.js",
       "sites/studentenwerk-muenchen.js",
-      "sites/studenten-wg.js"
+      "sites/studenten-wg.js",
+      "sites/avendrealouer.js"
     ],
     "permissions": [
         "tabs", "http://*/*", "https://*/*"

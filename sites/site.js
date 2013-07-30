@@ -19,7 +19,7 @@ function site() {
 
     var length = ads.length
     for (var i = 0; i < length; i++) {
-      link = $(ads[i]).find('a')[0].href
+      link = $(ads[i]).find('a')[ads_selector_id].href
       if(link == "") {
         //TODO fix this
         link = $(ads[i]).find('a')[1].href

@@ -7,5 +7,6 @@ function ad_id(url) {
 }
 container_selector = '#results_container'
 ads_selector = ".ann_ann"
+ads_selector_id = 0
 
 console.log('submodule loaded')
