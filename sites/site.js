@@ -121,6 +121,7 @@ function add_panel() {
     admin.style.left = "10px";
     admin.style.textAlign = "center";
     admin.style.borderRadius = "0.4em";
+    admin.style.zIndex = 9999;
 
 
     title = document.createElement('div');
