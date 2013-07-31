@@ -20,9 +20,11 @@ function site() {
     var length = ads.length
     for (var i = 0; i < length; i++) {
       link = $(ads[i]).find('a')[ads_selector_id].href
-      if(link == "") {
+      console.log(link)
+      if(document.URL.split('www.')[1].split('.')[0] == "avendrealouer" && $(ads[i]).find('a')[0].href == "http://www.avendrealouer.fr/#formPlusDePhotos") {
         //TODO fix this
-        link = $(ads[i]).find('a')[1].href
+        console.log("no picture")
+        link = $(ads[i]).find('a')[ads_selector_id + 1].href
       }
       container.ads.push(new Ad($(ads[i]).html(), ad_id(link), i))
     }
