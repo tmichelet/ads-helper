@@ -1,0 +1,28 @@
+{
+  "name": "ads-helper",
+  "version": "0.0.1",
+  "description": "tool to find your way threw classified ads",
+  "main": "test/test.js",
+  "dependencies": {
+    "zombie": "~2.0.0-alpha24",
+    "mocha": "~1.17.0",
+    "jsdom": "~0.8.11"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tmichelet/ads-helper.git"
+  },
+  "keywords": [
+    "ads-helper"
+  ],
+  "author": "tmichelet",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tmichelet/ads-helper/issues"
+  },
+  "homepage": "https://github.com/tmichelet/ads-helper"
+}
