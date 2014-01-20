@@ -2,11 +2,12 @@
   "name": "ads-helper",
   "version": "0.0.1",
   "description": "tool to find your way threw classified ads",
-  "main": "test/test.js",
+  "main": "no main defined",
   "dependencies": {
     "zombie": "~2.0.0-alpha24",
     "mocha": "~1.17.0",
-    "jsdom": "~0.8.11"
+    "jsdom": "~0.8.11",
+    "amdefine": "~0.1.0"
   },
   "devDependencies": {},
   "scripts": {
