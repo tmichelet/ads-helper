@@ -108,6 +108,7 @@ function saveDetails() {
 }
 
 function add_panel() {
+  //TODO change architecture, update html
       // css variables
     var orangeColor = "#f27b3e";
     var whiteBackground = "#f4f4f4";

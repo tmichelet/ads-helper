@@ -1,5 +1,6 @@
 // class representing the ads and the ads table
 
+//TODO check best practices
 function Ad (html, id, position) {
   this.html = html;
     this.id = id
