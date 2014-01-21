@@ -1,4 +1,28 @@
+if (typeof define !== 'function') {
+    var define = require('amdefine')(module);
+    var jsdom = require("jsdom").jsdom;
+    window = jsdom().parentWindow;
+}
 
+define(['jquery'], function ($) {
+    return {
+        load_spreadsheet: function (callback) {
+            var flickerAPI = "http://api.flickr.com/services/feeds/photos_public.gne?jsoncallback=?";
+            $.getJSON( flickerAPI, {
+              tags: "mount rainier",
+              tagmode: "any",
+              format: "json"
+            })
+              .done(callback);
+            // var SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxi8HcVHfRX4EgA6K35KUMSvn1OiJb3RdIDjiU6rLwW2VPnqTOt/exec";
+            // $.getJSON("http://graph.facebook.com/accenture",//SCRIPT_URL+"?callback=?",
+            //   //{method:"retrieve_data"},
+            //   callback);
+        }
+    }
+});
+
+/*
 // load jquery
 
 function wait_load_jquery() {
@@ -52,3 +76,4 @@ function load_spreadsheet() {
               });
 }
 
+*/

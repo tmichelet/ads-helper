@@ -17,17 +17,17 @@
       "http://www.studentenwerk-muenchen.de/*",
       "http://www.studenten-wg.de/*"
     ],
-    "js": ["include.js"]
+    "js": ["use-require.js"]
   }],
   "web_accessible_resources": [
     "main.js",
-    "loading.js",
     "ads.js",
     "use-require.js",
-    "require.js",
     "tempmain.js",
-    "utils/jquery.min.js",
+    "lib/require.js",
+    "lib/jquery.min.js",
     "utils/helpers.js",
+    "utils/loaders.js",
     "sites/site.js",
     "sites/famillechretienne.js",
     "sites/pap.js",

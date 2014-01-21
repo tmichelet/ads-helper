@@ -2,7 +2,7 @@ if (typeof define !== 'function') {
     var define = require('amdefine')(module);
 }
 
-define(function () {
+define([], function () {
     return {
         /*
         Returns the website's name given a url

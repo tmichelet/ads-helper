@@ -1,11 +1,11 @@
 var script = document.createElement('script');
 //TODO jquery no conflict mode
 //TODO jquery -> lib
-script.src = chrome.extension.getURL('/utils/jquery.min.js');
+script.src = chrome.extension.getURL('/lib/jquery.min.js');
 document.body.appendChild(script); 
 
 var script = document.createElement('script');
-script.src = chrome.extension.getURL('/loading.js');
+script.src = chrome.extension.getURL('/utils/loaders.js');
 document.body.appendChild(script);
 
 //TODO use require
